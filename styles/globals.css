@@ -1,6 +1,7 @@
-* {
-  font-family: "Noto Sans JP", "Noto Sans KR", sans-serif;
-}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
 html,
 body,
@@ -85,10 +86,11 @@ audio,
 video {
   margin: 0;
   padding: 0;
+  border: 0;
   font-size: 100%;
+  font: inherit;
   vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -124,4 +126,14 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
 }

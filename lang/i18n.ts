@@ -5,14 +5,28 @@ const resources = {
   en: {
     translation: {
       index: {
-        page_description: "",
+        main_description: "",
+        main_btn_reserve: "",
+        main_btn_participant: "",
+      },
+    },
+  },
+  jp: {
+    translation: {
+      index: {
+        main_description: "",
+        main_btn_reserve: "",
+        main_btn_participant: "",
       },
     },
   },
   ko: {
     translation: {
       index: {
-        page_description: "문씨가 만들어주는 품격있는 요리 지금 예약해서 즐기세요!!",
+        main_description1: "문씨가 만들어주는 품격있는 요리 지금 예약해서",
+        main_description2: "즐기세요!!",
+        main_btn_reserve: "예약하러가기",
+        main_btn_participant: "이번주참가자",
       },
     },
   },
