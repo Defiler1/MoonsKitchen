@@ -5,18 +5,20 @@ const resources = {
   en: {
     translation: {
       index: {
-        main_description: "",
-        main_btn_reserve: "",
-        main_btn_participant: "",
+        main_description1: "Make a reservation now and enjoy the elegant ",
+        main_description2: "cuisine prepared by Mr. Moon!",
+        main_btn_reserve: "Go to Schedule",
+        main_btn_participant: "Participants",
       },
     },
   },
   jp: {
     translation: {
       index: {
-        main_description: "",
-        main_btn_reserve: "",
-        main_btn_participant: "",
+        main_description1: "ムンさんが作ってくれる上品な料理、今すぐ予約",
+        main_description2: "してお楽しみください!!!",
+        main_btn_reserve: "予約する",
+        main_btn_participant: "今週の出場者",
       },
     },
   },
