@@ -8,7 +8,6 @@ export default function Profile() {
 
   return (
     <>
-      {" "}
       <div className={styles.bg}>
         <div className={styles.container}>
           <div className={styles.maintxt}>
