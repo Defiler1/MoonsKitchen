@@ -7,14 +7,3 @@
   justify-items: center;
   align-items: center;
 }
-
-.container {
-  /* background-color: antiquewhite; */
-  width: 85%;
-  min-height: 100vh;
-}
-
-.first_page {
-  width: 100%;
-  min-height: 100vh;
-}

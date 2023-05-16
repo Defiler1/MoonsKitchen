@@ -1,18 +1,15 @@
 import Main from "components/Main";
 import "../lang/i18n";
 import styles from "../styles/index.module.css";
+import Profile from "components/Profile";
 
 export default function Home() {
   return (
     <>
-      <div>
-        <title>Moon's Kitchen</title>
-      </div>
+      <title>Moon's Kitchen</title>
       <div className={styles.main_container}>
-        <div className={styles.first_page}>
-          <Main />
-        </div>
-        <div className={styles.container}></div>
+        <Main />
+        <Profile />
       </div>
     </>
   );
