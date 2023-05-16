@@ -1,4 +1,4 @@
-import Main from "components/main";
+import Main from "components/Main";
 import "../lang/i18n";
 import styles from "../styles/index.module.css";
 

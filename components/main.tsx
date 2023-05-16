@@ -1,7 +1,7 @@
 // 첫번째 페이지
-import { useTranslation } from "./../node_modules/react-i18next/dist/es/useTranslation";
-import MainTxt from "./util/maintxt";
+import MainTxt from "./util/Maintxt";
 import styles from "../styles/main.module.css";
+import { useTranslation } from "react-i18next";
 
 export default function Main() {
   const { t } = useTranslation();

@@ -17,7 +17,7 @@ export default function Setting({ lan, setLan, changeLanguageToKo, changeLanguag
     setIsSetting(!isSetting);
   };
 
-  const onChange = (e, changeLan) => {
+  const onChange = (e: any, changeLan: () => any) => {
     changeLan();
     setLan(e.target.value);
   };
