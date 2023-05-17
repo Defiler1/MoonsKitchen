@@ -1,15 +1,17 @@
+import React from "react";
 import styles from "../styles/menu.module.css";
 import MainTxt from "./util/Maintxt";
+import { forwardRef } from "react";
 
-export default function Menu() {
+const Menu = forwardRef<HTMLDivElement, any>((props, ref) => {
   return (
     <>
-      <div className={styles.bg}>
+      <div className={styles.bg} ref={ref}>
         <div className={styles.container}>
           <div className={styles.top_container}>
-            <p className={styles.maintxt}>
+            <div className={styles.maintxt}>
               <MainTxt text={"이번주 메뉴"} />
-            </p>
+            </div>
             <p className={styles.date}>5월 20일</p>
           </div>
           <div className={styles.bottom_container}>
@@ -35,4 +37,6 @@ export default function Menu() {
       </div>
     </>
   );
-}
+});
+
+export default Menu;

@@ -23,8 +23,8 @@ export default function ReviewBox({ img, stars, name, description }: ReviewBoxPr
             <div className={styles.name_container}>
               <p className={styles.name}>{name}</p>
               <div className={styles.stars}>
-                {starsArr.map((el: number) => {
-                  return <AiFillStar key={el + 1} fill="#FFBD29" size={25} />;
+                {starsArr.map((el: number, idx: number) => {
+                  return <AiFillStar key={idx + 100} fill="#FFBD29" size={25} />;
                 })}
               </div>
             </div>

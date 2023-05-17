@@ -2,8 +2,9 @@
 import MainTxt from "./util/Maintxt";
 import styles from "../styles/main.module.css";
 import { useTranslation } from "react-i18next";
+import { forwardRef } from "react";
 
-export default function Main() {
+const Main = forwardRef<HTMLDivElement, any>(({ moveToMenu, moveToParticipants }, ref) => {
   const { t } = useTranslation();
 
   return (
@@ -19,8 +20,12 @@ export default function Main() {
             <h2>{t(`index.main_description2`)}</h2>
           </div>
           <div className={styles.btn_container}>
-            <button className={styles.light_filled_btn}>{t(`index.main_btn_reserve`)}</button>
-            <button className={styles.light_empty_btn}>{t(`index.main_btn_participant`)}</button>
+            <button className={styles.light_filled_btn} onClick={moveToMenu}>
+              {t(`index.main_btn_reserve`)}
+            </button>
+            <button className={styles.light_empty_btn} onClick={moveToParticipants}>
+              {t(`index.main_btn_participant`)}
+            </button>
           </div>
         </div>
       </div>
@@ -30,4 +35,5 @@ export default function Main() {
       </div>
     </div>
   );
-}
+});
+export default Main;

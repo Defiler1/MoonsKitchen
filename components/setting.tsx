@@ -1,4 +1,4 @@
-import { IoSettingsOutline } from "react-icons/io5";
+import { IoLanguageSharp } from "react-icons/io5";
 import styles from "../styles/setting.module.css";
 import { Dispatch, SetStateAction, useState } from "react";
 
@@ -25,7 +25,7 @@ export default function Setting({ lan, setLan, changeLanguageToKo, changeLanguag
   return (
     <>
       <div className={styles.circle} onClick={onClick}>
-        <IoSettingsOutline size={"40"} />
+        <IoLanguageSharp size={"35"} />
       </div>
       {isSetting && (
         <div className={styles.menu_container}>
