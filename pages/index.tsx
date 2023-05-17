@@ -4,6 +4,7 @@ import styles from "../styles/index.module.css";
 import Profile from "components/Profile";
 import Portfolio from "components/Portfolio";
 import Menu from "components/Menu";
+import Participants from "components/Participants";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Profile />
         <Portfolio />
         <Menu />
+        <Participants />
       </div>
     </>
   );
