@@ -34,20 +34,21 @@
 .btn_container {
   padding: 6rem 0px;
   display: flex;
+  animation: down_to_up 0.6s ease-in;
 }
 
 .main_text {
   padding: 7rem 0px;
 }
 
-.light_description {
+.description {
   font-size: 2rem;
   padding: 7rem 0px 0px 0px;
   color: #535657;
   font-weight: 600;
 }
 
-.light_filled_btn {
+.filled_btn {
   background-color: #32b768;
   color: white;
   font-size: x-large;
@@ -57,13 +58,13 @@
   border: 2px solid #32b768;
 }
 
-.light_filled_btn:hover {
+.filled_btn:hover {
   background-color: white;
   color: #32b768;
   border: 2px solid #32b768;
 }
 
-.light_empty_btn {
+.empty_btn {
   background-color: white;
   border: 2px solid #32b768;
   font-size: x-large;
@@ -74,7 +75,7 @@
   transition: background-color 0.5s;
 }
 
-.light_empty_btn:hover {
+.empty_btn:hover {
   background-color: #32b768;
   color: white;
 }
@@ -83,4 +84,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@keyframes down_to_up {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }

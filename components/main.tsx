@@ -15,15 +15,16 @@ const Main = forwardRef<HTMLDivElement, any>(({ moveToMenu, moveToParticipants }
           <div className={styles.main_text}>
             <MainTxt text="Moon's Kitchen" />
           </div>
-          <div className={styles.light_description}>
+          {/* Description */}
+          <div className={styles.description}>
             <h2>{t(`index.main_description1`)}</h2>
             <h2>{t(`index.main_description2`)}</h2>
           </div>
           <div className={styles.btn_container}>
-            <button className={styles.light_filled_btn} onClick={moveToMenu}>
+            <button className={styles.filled_btn} onClick={moveToMenu}>
               {t(`index.main_btn_reserve`)}
             </button>
-            <button className={styles.light_empty_btn} onClick={moveToParticipants}>
+            <button className={styles.empty_btn} onClick={moveToParticipants}>
               {t(`index.main_btn_participant`)}
             </button>
           </div>
