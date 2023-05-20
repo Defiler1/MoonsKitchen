@@ -1,4 +1,3 @@
-import Main from "components/Main";
 import "../lang/i18n";
 import styles from "../styles/index.module.css";
 import Profile from "components/Profile";
@@ -6,6 +5,7 @@ import Portfolio from "components/Portfolio";
 import Menu from "components/Menu";
 import Participants from "components/Participants";
 import { Fragment, useRef } from "react";
+import Main from "components/main";
 
 export default function Home() {
   const mainPage = useRef<HTMLDivElement>(null);

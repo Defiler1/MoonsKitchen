@@ -1,6 +1,6 @@
 import { useState } from "react";
 import i18n from "lang/i18n";
-import Setting from "./Setting";
+import Setting from "./setting";
 
 export default function Layout({ children }) {
   const [lan, setLan] = useState<number>(1); // 1. ko 2.en 3.jp

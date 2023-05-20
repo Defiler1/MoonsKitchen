@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import "../styles/globals.css";
 import React from "react";
 import Layout from "components/Layout";
+import { Storage } from "util/firebase";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [hydrated, setHydrated] = React.useState(false);
@@ -12,6 +13,8 @@ const App = ({ Component, pageProps }: AppProps) => {
     // Returns null on first render, so the client and server match
     return null;
   }
+
+  console.log("Storage", Storage);
 
   return (
     <Layout>
