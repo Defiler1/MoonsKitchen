@@ -1,8 +1,8 @@
 // 첫번째 페이지
-import MainTxt from "./util/Maintxt";
 import styles from "../styles/main.module.css";
 import { useTranslation } from "react-i18next";
 import { forwardRef } from "react";
+import MainTxt from "./util/Maintxt";
 
 const Main = forwardRef<HTMLDivElement, any>(({ moveToMenu, moveToParticipants }, ref) => {
   const { t } = useTranslation();

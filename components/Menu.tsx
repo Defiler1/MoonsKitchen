@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styles from "../styles/menu.module.css";
 import { forwardRef } from "react";
 import MainTxt from "./util/Maintxt";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, doc, serverTimestamp } from "firebase/firestore";
 import { Storage } from "util/firebase";
 
 const Menu = forwardRef<HTMLDivElement, any>((props, ref) => {
@@ -24,6 +24,7 @@ const Menu = forwardRef<HTMLDivElement, any>((props, ref) => {
         name: nameInput.current.value,
         group: groupInput.current.value,
         number: numberInput.current.value,
+        timestamp: serverTimestamp(),
       });
 
       alert("예약되었습니다.");

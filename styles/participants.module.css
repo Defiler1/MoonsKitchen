@@ -26,4 +26,5 @@
   display: grid;
   grid-template-columns: repeat(3, 500px);
   grid-template-rows: repeat(3, 200px);
+  place-items: center;
 }

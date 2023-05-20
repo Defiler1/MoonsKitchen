@@ -1,17 +1,18 @@
 import styles from "../styles/participantsCard.module.css";
+import { CgProfile } from "react-icons/cg";
 
 interface ParticipantsCardProps {
-  img: string;
   name: string;
 }
 
-export default function ParticipantsCard({ img, name }: ParticipantsCardProps) {
+export default function ParticipantsCard({ name }: ParticipantsCardProps) {
   return (
     <>
       <div className={styles.container}>
         <div className={styles.left_container}>
           <div className={styles.circle}>
-            <img className={styles.img} src={img} alt={`${name}'s profile image`} />
+            <img className={styles.img} src={"/xie.png"} alt={`${name}'s profile image`} />
+            {/* <CgProfile className={styles.img} /> */}
           </div>
         </div>
         <div className={styles.right_container}>

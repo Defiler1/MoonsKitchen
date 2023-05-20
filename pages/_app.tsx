@@ -14,8 +14,6 @@ const App = ({ Component, pageProps }: AppProps) => {
     return null;
   }
 
-  console.log("Storage", Storage);
-
   return (
     <Layout>
       <Component {...pageProps} />
