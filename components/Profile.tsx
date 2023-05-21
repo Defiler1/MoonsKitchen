@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import styles from "../styles/profile.module.css";
-import MainTxt from "./util/Maintxt";
 import ReviewBox from "./ReviewBox";
+import MobileMainTxt from "./util/MobileMainTxt";
+import MobileProfile from "./MobileProfile";
 
 export default function Profile() {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ export default function Profile() {
       <div className={styles.bg}>
         <div className={styles.container}>
           <div className={styles.maintxt}>
-            <MainTxt text={"Chef"} />
+            <MobileMainTxt text={"Chef"} />
           </div>
           <div className={styles.main_container}>
             {/* image */}
@@ -37,15 +38,8 @@ export default function Profile() {
           </div>
         </div>
       </div>
-      <style jsx>
-        {`
-          p {
-            font-size: 36px;
-            font-weight: bold;
-            color: #535657;
-          }
-        `}
-      </style>
+      {/* 모바일페이지 */}
+      <MobileProfile />
     </>
   );
 }

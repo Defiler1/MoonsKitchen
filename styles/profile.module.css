@@ -48,10 +48,34 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.des_box p {
+  font-size: 36px;
+  font-weight: bold;
+  color: #535657;
+}
 
 .review_container {
   height: 30%;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+}
+
+.mobile_container {
+  display: none;
+}
+
+@media (max-height: 650px) {
+  .review_container {
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1.5rem;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  .bg {
+    display: none;
+  }
 }

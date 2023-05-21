@@ -6,16 +6,9 @@
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  /* min-width: 667px; */
 }
 
-.container {
-  min-height: 100vh;
-  width: 100%;
-  min-height: 100vh;
-}
-
-.asdf {
-  min-height: 100vh;
-  width: 100%;
-  min-height: 100vh;
+@media (max-width: 767px) {
+  /* 모바일 */
 }

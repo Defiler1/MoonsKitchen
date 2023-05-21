@@ -52,8 +52,8 @@
 
 .img {
   object-fit: cover;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 }
 
 .h1 {
@@ -78,6 +78,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 5%;
+  min-width: 300px;
+  min-height: 294px;
 }
 
 .form_box {
@@ -93,6 +95,7 @@
   border: none;
   font-size: large;
   border-radius: 3%;
+  margin: 5px;
 }
 
 .input::placeholder {
@@ -109,6 +112,7 @@
 .btn_container {
   display: flex;
   justify-content: flex-end;
+  padding-top: 5px;
 }
 
 .btn {
@@ -118,4 +122,146 @@
   color: white;
   font-size: large;
   border-radius: 8%;
+}
+
+.mobile_bg {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .bg {
+    display: none;
+  }
+
+  .mobile_bg {
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile_container {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .mobile_top_container {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .mobile_bottom_container {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile_top_container p {
+    font-size: 30px;
+    font-weight: 600;
+    color: #535657;
+  }
+
+  .mobile_img_container {
+    width: 100%;
+    height: 60%;
+  }
+
+  .mobile_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .mobile_bottom_container h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #535657;
+    padding: 3rem 0px;
+  }
+
+  .mobile_bg2 {
+    width: 100%;
+    min-height: 75vh;
+    background-color: #f8f9fb;
+    display: flex;
+    justify-content: center;
+  }
+  .mobile_container2 {
+    width: 100%;
+    min-height: 75vh;
+  }
+  .mobile_top_container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+  }
+  .mobile_bottom_container2 {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile_form {
+    width: 90%;
+    height: 50%;
+    background-color: #dedee0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    min-width: 300px;
+    min-height: 294px;
+  }
+
+  .mobile_form_box {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .mobile_input {
+    padding: 1rem;
+    border: none;
+    font-size: large;
+    border-radius: 3%;
+    margin: 5px;
+  }
+
+  .mobile_input::placeholder {
+    border: none;
+    font-weight: bold;
+    color: #afafaf;
+    font-size: large;
+  }
+
+  .mobile_input:focus {
+    outline: none;
+  }
+
+  .mobile_btn_container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5px;
+  }
+
+  .mobile_btn {
+    padding: 12px 36px;
+    border: #32b768;
+    background-color: #32b768;
+    color: white;
+    font-size: large;
+    border-radius: 8%;
+  }
 }
