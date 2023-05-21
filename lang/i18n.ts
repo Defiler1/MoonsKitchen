@@ -5,6 +5,7 @@ const resources = {
   en: {
     translation: {
       index: {
+        date: "May 6th",
         main_description1: "Make a reservation now and enjoy the elegant ",
         main_description2: "cuisine prepared by Mr. Moon!",
         main_btn_reserve: "Go to Schedule",
@@ -19,12 +20,19 @@ const resources = {
         menu_name: "fried udon",
         menu_reserve: "Reserve",
         participant_main: "Participants",
+        placeholder1: "Name",
+        placeholder2: "Nationality",
+        placeholder3: "PhoneNumber",
+        reserve_btn: "Reserve",
+        alert1: "Scheduled.",
+        alert2: "Please fill out the form completely.",
       },
     },
   },
   jp: {
     translation: {
       index: {
+        date: "5月6日",
         main_description1: "ムンさんが作ってくれる上品な料理、今すぐ予約",
         main_description2: "してお楽しみください!!!",
         main_btn_reserve: "予約する",
@@ -39,12 +47,19 @@ const resources = {
         menu_name: "焼うどん",
         menu_reserve: "予約する",
         participant_main: "今回の参加者",
+        placeholder1: "名前",
+        placeholder2: "国籍",
+        placeholder3: "電話番号",
+        reserve_btn: "予約",
+        alert1: "予約しました。",
+        alert2: "フォームに全てご記入ください。",
       },
     },
   },
   ko: {
     translation: {
       index: {
+        date: "5월6일",
         main_description1: "문씨가 만들어주는 품격있는 요리 지금 예약해서",
         main_description2: "즐기세요!!",
         main_btn_reserve: "예약하러가기",
@@ -59,6 +74,12 @@ const resources = {
         menu_name: "볶음우동",
         menu_reserve: "예약하기",
         participant_main: "이번주 참가자",
+        placeholder1: "이름",
+        placeholder2: "국적",
+        placeholder3: "전화번호",
+        reserve_btn: "예약",
+        alert1: "예약되었습니다.",
+        alert2: "폼을 모두 작성해주세요.",
       },
     },
   },

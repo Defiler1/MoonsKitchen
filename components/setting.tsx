@@ -1,6 +1,6 @@
 import { IoLanguageSharp } from "react-icons/io5";
 import styles from "../styles/setting.module.css";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 
 interface SettingProps {
   lan: number;
@@ -12,8 +12,23 @@ interface SettingProps {
 
 export default function Setting({ lan, setLan, changeLanguageToKo, changeLanguageToEn, changeLanguageToJp }: SettingProps) {
   const [isSetting, setIsSetting] = useState<boolean>(false);
+  const settingRef = useRef(null);
 
-  const onClick = () => {
+  const handleCloseSetting = (e) => {
+    if (isSetting && (!settingRef.current || !settingRef.current.contains(e.target))) {
+      setIsSetting(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("click", handleCloseSetting);
+    return () => {
+      window.removeEventListener("click", handleCloseSetting);
+    };
+  }, []);
+
+  const onClick = (e) => {
+    e.stopPropagation();
     setIsSetting(!isSetting);
   };
 
@@ -23,7 +38,7 @@ export default function Setting({ lan, setLan, changeLanguageToKo, changeLanguag
   };
 
   return (
-    <>
+    <div ref={settingRef}>
       <div className={styles.circle} onClick={onClick}>
         <IoLanguageSharp size={"35"} />
       </div>
@@ -86,6 +101,6 @@ export default function Setting({ lan, setLan, changeLanguageToKo, changeLanguag
           }
         `}
       </style>
-    </>
+    </div>
   );
 }

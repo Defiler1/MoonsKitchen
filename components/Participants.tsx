@@ -4,8 +4,10 @@ import ParticipantsCard from "./ParticipantsCard";
 import MainTxt from "./util/Maintxt";
 import { forwardRef, useEffect, useState } from "react";
 import { Storage } from "util/firebase";
+import { useTranslation } from "react-i18next";
 
 const Participants = forwardRef<HTMLDivElement, any>((props, ref) => {
+  const { t } = useTranslation();
   const [userNames, setUserNames] = useState<Array<string>>([]);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ const Participants = forwardRef<HTMLDivElement, any>((props, ref) => {
       <div className={styles.bg} ref={ref}>
         <div className={styles.container}>
           <div className={styles.top_container}>
-            <MainTxt text={"이번주 참가자"} />
+            <MainTxt text={t(`index.participant_main`)} />
           </div>
           <div className={styles.bottom_container}>
             {userNames.map((name, idx) => {

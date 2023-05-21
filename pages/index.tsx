@@ -6,6 +6,7 @@ import Menu from "components/Menu";
 import Participants from "components/Participants";
 import { Fragment, useRef } from "react";
 import Main from "components/main";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
   const mainPage = useRef<HTMLDivElement>(null);
@@ -13,6 +14,7 @@ export default function Home() {
   const portfolioPage = useRef<HTMLDivElement>(null);
   const menuPage = useRef(null);
   const participantsPage = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   const moveToMenu = () => {
     menuPage.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -22,13 +24,9 @@ export default function Home() {
     participantsPage.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const options = {
-    // root: ,
-    rootMargin: "0px",
-    threshold: 0.5,
-  };
-
-  let observer = new IntersectionObserver(() => {}, options);
+  const date = "5월6일"; // firestore 에 저장할 콜렉션 이름
+  const imgSrc = "/yaki_udong.png"; // 메뉴 이미지
+  const imgAlt = "yakiudong image"; // 메뉴 이미지 alt
 
   return (
     <>
@@ -37,7 +35,7 @@ export default function Home() {
         <Main ref={mainPage} moveToMenu={moveToMenu} moveToParticipants={moveToParticipants} />
         <Profile />
         <Portfolio />
-        <Menu ref={menuPage} />
+        <Menu ref={menuPage} imgSrc={imgSrc} imgAlt={imgAlt} date={date} />
         <Participants ref={participantsPage} />
       </div>
     </>

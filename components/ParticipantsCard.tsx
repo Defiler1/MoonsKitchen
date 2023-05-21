@@ -11,8 +11,8 @@ export default function ParticipantsCard({ name }: ParticipantsCardProps) {
       <div className={styles.container}>
         <div className={styles.left_container}>
           <div className={styles.circle}>
-            <img className={styles.img} src={"/xie.png"} alt={`${name}'s profile image`} />
-            {/* <CgProfile className={styles.img} /> */}
+            {/* <img className={styles.img} src={"/xie.png"} alt={`${name}'s profile image`} /> */}
+            <CgProfile className={styles.img} />
           </div>
         </div>
         <div className={styles.right_container}>

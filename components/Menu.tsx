@@ -2,15 +2,15 @@ import React, { useRef } from "react";
 import styles from "../styles/menu.module.css";
 import { forwardRef } from "react";
 import MainTxt from "./util/Maintxt";
-import { addDoc, collection, doc, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { Storage } from "util/firebase";
+import { useTranslation } from "react-i18next";
 
-const Menu = forwardRef<HTMLDivElement, any>((props, ref) => {
+const Menu = forwardRef<HTMLDivElement, any>(({ date, imgSrc, imgAlt }, ref) => {
   const nameInput = useRef(null);
   const groupInput = useRef(null);
   const numberInput = useRef(null);
-
-  const date = "5월6일"; // 이벤트 날짜, db문서이름
+  const { t } = useTranslation();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -27,12 +27,12 @@ const Menu = forwardRef<HTMLDivElement, any>((props, ref) => {
         timestamp: serverTimestamp(),
       });
 
-      alert("예약되었습니다.");
+      alert(t(`index.alert1`));
       nameInput.current.value = "";
       groupInput.current.value = "";
       numberInput.current.value = "";
     } else {
-      alert("폼을 모두 작성해주세요.");
+      alert(t(`index.alert2`));
     }
   };
 
@@ -42,29 +42,29 @@ const Menu = forwardRef<HTMLDivElement, any>((props, ref) => {
         <div className={styles.container}>
           <div className={styles.top_container}>
             <div className={styles.maintxt}>
-              <MainTxt text={"이번주 메뉴"} />
+              <MainTxt text={t(`index.menu_name`)} />
             </div>
-            <p className={styles.date}>23.05.20</p>
+            <p className={styles.date}>{t(`index.date`)}</p>
           </div>
           <div className={styles.bottom_container}>
             <div className={styles.left_container}>
-              <h1 className={styles.h1}>볶음우동</h1>
-              <h2 className={styles.h2}>예약하기</h2>
+              <h1 className={styles.h1}>{t(`index.menu_name`)}</h1>
+              <h2 className={styles.h2}>{t(`index.menu_reserve`)}</h2>
               <form action="" className={styles.form} onSubmit={onSubmit}>
                 <div className={styles.form_box}>
-                  <input className={styles.input} type="text" placeholder="이름" ref={nameInput} />
-                  <input className={styles.input} type="text" placeholder="소속 ex) youngjin Univ" ref={groupInput} />
-                  <input className={styles.input} type="text" placeholder="전화번호 ex) 000-0000-0000" ref={numberInput} />
+                  <input className={styles.input} type="text" placeholder={t(`index.placeholder1`)} ref={nameInput} />
+                  <input className={styles.input} type="text" placeholder={t(`index.placeholder2`)} ref={groupInput} />
+                  <input className={styles.input} type="text" placeholder={t(`index.placeholder3`)} ref={numberInput} />
                   <div className={styles.btn_container}>
                     <button className={styles.btn} onClick={submitInfo}>
-                      예약
+                      {t(`index.reserve_btn`)}
                     </button>
                   </div>
                 </div>
               </form>
             </div>
             <div className={styles.right_container}>
-              <img src="/yaki_udong.png" alt="yakiudong image" className={styles.img} />
+              <img src={imgSrc} alt={imgAlt} className={styles.img} />
             </div>
           </div>
         </div>

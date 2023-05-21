@@ -32,7 +32,7 @@ const Main = forwardRef<HTMLDivElement, any>(({ moveToMenu, moveToParticipants }
       </div>
       {/* 오른쪽 */}
       <div className={styles.right_container}>
-        <img src="/main_img.png" alt="main img" className={styles.img} />
+        <img src="/main_img.png" alt="main image" className={styles.img} />
       </div>
     </div>
   );
