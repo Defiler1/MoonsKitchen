@@ -3,6 +3,7 @@ import styles from "../styles/profile.module.css";
 import ReviewBox from "./ReviewBox";
 import MobileMainTxt from "./util/MobileMainTxt";
 import MobileProfile from "./MobileProfile";
+import MainTxt from "./util/Maintxt";
 
 export default function Profile() {
   const { t } = useTranslation();
@@ -12,7 +13,7 @@ export default function Profile() {
       <div className={styles.bg}>
         <div className={styles.container}>
           <div className={styles.maintxt}>
-            <MobileMainTxt text={"Chef"} />
+            <MainTxt text={"Chef"} />
           </div>
           <div className={styles.main_container}>
             {/* image */}
