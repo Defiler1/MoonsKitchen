@@ -5,7 +5,7 @@ import Portfolio from "components/Portfolio";
 import Menu from "components/Menu";
 import Participants from "components/Participants";
 import { Fragment, useRef } from "react";
-import Main from "components/main";
+import Main from "components/ain";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
