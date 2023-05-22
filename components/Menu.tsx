@@ -38,8 +38,9 @@ const Menu = forwardRef<HTMLDivElement, any>(({ date, imgSrc, imgAlt }, ref) => 
     } else {
       alert(t(`index.alert2`));
     }
+  };
 
-    // 모바일
+  const mobileSubmitInfo = async () => {
     if (mobileNameInput.current.value && mobileGroupInput.current.value && mobileNumberInput.current.value) {
       // participants란 collection에 nameInput.current.value이라는 문서를 추가
 
@@ -123,7 +124,7 @@ const Menu = forwardRef<HTMLDivElement, any>(({ date, imgSrc, imgAlt }, ref) => 
                   <input className={styles.mobile_input} type="text" placeholder={t(`index.placeholder2`)} ref={mobileGroupInput} />
                   <input className={styles.mobile_input} type="text" placeholder={t(`index.placeholder3`)} ref={mobileNumberInput} />
                   <div className={styles.mobile_btn_container}>
-                    <button className={styles.mobile_btn} onClick={submitInfo}>
+                    <button className={styles.mobile_btn} onClick={mobileSubmitInfo}>
                       {t(`index.reserve_btn`)}
                     </button>
                   </div>
