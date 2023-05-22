@@ -1,5 +1,6 @@
 import { useState } from "react";
 import i18n from "lang/i18n";
+// @ts-ignore
 import Setting from "./Setting";
 
 export default function Layout({ children }) {
