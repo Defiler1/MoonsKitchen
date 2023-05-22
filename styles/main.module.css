@@ -1,3 +1,10 @@
+.bg {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f9fb;
+  display: flex;
+}
+
 .container {
   display: flex;
   min-height: 100vh;
@@ -87,15 +94,19 @@
   object-fit: cover;
 }
 
-.mobile_img_container {
+/* .mobile_img_container {
   display: none;
-}
+} */
 
 .mobile_description {
   display: none;
 }
 
 .mobile_header {
+  display: none;
+}
+
+.mobile_container {
   display: none;
 }
 @keyframes down_to_up {
@@ -111,43 +122,23 @@
 
 /* 모바일 */
 @media (max-width: 767px) {
-  .container {
+  .mobile_container {
     display: flex;
     min-height: 100vh;
     width: 100%;
-  }
-
-  /* 모바일에선 이게 메인 컨테이너 */
-  .left_container {
-    display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
     align-items: center;
-    /* min-width: 484px; */
+    background-color: white;
   }
 
-  .left_main_container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-  }
-
-  .right_container {
-    display: none;
-  }
-
-  .main_text {
+  .container {
     display: none;
   }
 
   .mobile_img_container {
-    width: 500px;
-    height: 500px;
-    background-color: antiquewhite;
-    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
   }
 
   .mobile_img {
@@ -156,25 +147,9 @@
     object-fit: cover;
   }
 
-  .btn_container {
-    display: flex;
-    animation: down_to_up 0.6s ease-in;
-    justify-content: center;
-    padding: 0px 0px;
-    align-items: center;
-  }
-
-  .empty_btn {
-    display: none;
-  }
-
-  .description {
-    display: none;
-  }
-
   .mobile_description {
     font-size: 1.5rem;
-    padding: 3rem 0px 3rem 0px;
+    padding: 2rem 0px;
     color: #535657;
     font-weight: 600;
     width: 90%;
@@ -183,6 +158,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .mobile_description h2 {
     padding-top: 6px;
   }
@@ -196,11 +172,29 @@
     align-items: center;
     /* position: fixed; */
     background-color: white;
+    padding: 1rem 0px;
   }
 
   .mobile_header_h1 {
     color: #32b768;
     font-size: 37px;
     font-weight: bold;
+  }
+
+  .btn_container {
+    padding: 3rem 0px;
+    display: flex;
+    animation: down_to_up 0.6s ease-in;
+  }
+
+  .filled_btn {
+    background-color: #32b768;
+    color: white;
+    font-size: x-large;
+    border-radius: 5px;
+    padding: 13px;
+    transition: background-color 0.5s;
+    border: 2px solid #32b768;
+    white-space: nowrap;
   }
 }
