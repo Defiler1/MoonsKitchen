@@ -11,6 +11,9 @@ const Menu = forwardRef<HTMLDivElement, any>(({ date, imgSrc, imgAlt }, ref) => 
   const nameInput = useRef(null);
   const groupInput = useRef(null);
   const numberInput = useRef(null);
+  const mobileNameInput = useRef(null);
+  const mobileGroupInput = useRef(null);
+  const mobileNumberInput = useRef(null);
   const { t } = useTranslation();
 
   const onSubmit = (e) => {
@@ -32,6 +35,25 @@ const Menu = forwardRef<HTMLDivElement, any>(({ date, imgSrc, imgAlt }, ref) => 
       nameInput.current.value = "";
       groupInput.current.value = "";
       numberInput.current.value = "";
+    } else {
+      alert(t(`index.alert2`));
+    }
+
+    // 모바일
+    if (mobileNameInput.current.value && mobileGroupInput.current.value && mobileNumberInput.current.value) {
+      // participants란 collection에 nameInput.current.value이라는 문서를 추가
+
+      await addDoc(collection(Storage, date), {
+        name: mobileNameInput.current.value,
+        group: mobileGroupInput.current.value,
+        number: mobileNumberInput.current.value,
+        timestamp: serverTimestamp(),
+      });
+
+      alert(t(`index.alert1`));
+      mobileNameInput.current.value = "";
+      mobileGroupInput.current.value = "";
+      mobileNumberInput.current.value = "";
     } else {
       alert(t(`index.alert2`));
     }
@@ -97,9 +119,9 @@ const Menu = forwardRef<HTMLDivElement, any>(({ date, imgSrc, imgAlt }, ref) => 
             <div className={styles.mobile_bottom_container2}>
               <form action="" className={styles.mobile_form} onSubmit={onSubmit}>
                 <div className={styles.mobile_form_box}>
-                  <input className={styles.mobile_input} type="text" placeholder={t(`index.placeholder1`)} ref={nameInput} />
-                  <input className={styles.mobile_input} type="text" placeholder={t(`index.placeholder2`)} ref={groupInput} />
-                  <input className={styles.mobile_input} type="text" placeholder={t(`index.placeholder3`)} ref={numberInput} />
+                  <input className={styles.mobile_input} type="text" placeholder={t(`index.placeholder1`)} ref={mobileNameInput} />
+                  <input className={styles.mobile_input} type="text" placeholder={t(`index.placeholder2`)} ref={mobileGroupInput} />
+                  <input className={styles.mobile_input} type="text" placeholder={t(`index.placeholder3`)} ref={mobileNumberInput} />
                   <div className={styles.mobile_btn_container}>
                     <button className={styles.mobile_btn} onClick={submitInfo}>
                       {t(`index.reserve_btn`)}
