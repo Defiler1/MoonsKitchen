@@ -5,7 +5,7 @@ const resources = {
   en: {
     translation: {
       index: {
-        date: "May 6th",
+        date: "May 29th",
         main_description1: "Join now and enjoy the elegant ",
         main_description2: "cuisine prepared by Mr. Moon!",
         main_btn_reserve: "Join",
@@ -17,7 +17,7 @@ const resources = {
         profile_description5: "HomeTown : Daegu Korea",
         profile_description6: "Possible cuisines : Western, Chinese, Korean",
         menu_main: "This week's menu",
-        menu_name: "fried udon",
+        menu_name: "Rose Pasta",
         menu_reserve: "Join",
         participant_main: "Participants",
         placeholder1: "Name",
@@ -32,7 +32,7 @@ const resources = {
   jp: {
     translation: {
       index: {
-        date: "5月6日",
+        date: "5月29日",
         main_description1: "ムンさんが作ってくれる上品な料理、今すぐ参加",
         main_description2: "してお楽しみください!!!",
         main_btn_reserve: "参加する",
@@ -44,7 +44,7 @@ const resources = {
         profile_description5: "故郷 : 大邱廣域市 韓国",
         profile_description6: "可能な料理 : 洋食、中華、韓食",
         menu_main: "今週のメニュー",
-        menu_name: "焼うどん",
+        menu_name: "ロゼパスタ",
         menu_reserve: "参加する",
         participant_main: "今回の参加者",
         placeholder1: "名前",
@@ -59,7 +59,7 @@ const resources = {
   ko: {
     translation: {
       index: {
-        date: "5월6일",
+        date: "5월29일",
         main_description1: "문씨가 만들어주는 품격있는 요리 지금 참가해서",
         main_description2: "즐기세요!!",
         main_description3: "문씨가 만들어주는 품격있는 요리",
@@ -73,7 +73,7 @@ const resources = {
         profile_description5: "고향 : 대구",
         profile_description6: "가능한 요리 : 양식, 중식, 한식",
         menu_main: "이번주 메뉴",
-        menu_name: "볶음우동",
+        menu_name: "로제 파스타",
         menu_reserve: "참가하기",
         participant_main: "이번주 참가자",
         placeholder1: "이름",

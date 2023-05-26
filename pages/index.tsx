@@ -24,9 +24,9 @@ export default function Home() {
     participantsPage.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const date = "5월6일"; // firestore 에 저장할 콜렉션 이름
-  const imgSrc = "/yaki_udong.png"; // 메뉴 이미지
-  const imgAlt = "yakiudong image"; // 메뉴 이미지 alt
+  const date = "5월29일"; // firestore 에 저장할 콜렉션 이름
+  const imgSrc = "/rose_pasta.jpg"; // 메뉴 이미지
+  const imgAlt = "rose pasta image"; // 메뉴 이미지 alt
 
   return (
     <>
@@ -36,7 +36,7 @@ export default function Home() {
         <Profile />
         <Portfolio />
         <Menu ref={menuPage} imgSrc={imgSrc} imgAlt={imgAlt} date={date} />
-        <Participants ref={participantsPage} />
+        <Participants ref={participantsPage} date={date} />
       </div>
     </>
   );
