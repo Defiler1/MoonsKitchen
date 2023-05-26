@@ -7,13 +7,13 @@ import { Storage } from "util/firebase";
 import { useTranslation } from "react-i18next";
 import MobileMainTxt from "./util/MobileMainTxt";
 
-const Participants = forwardRef<HTMLDivElement, any>((props, ref) => {
+const Participants = forwardRef<HTMLDivElement, any>(({ date }, ref) => {
   const { t } = useTranslation();
   const [userNames, setUserNames] = useState<Array<string>>([]);
 
   useEffect(() => {
     async function getDatas() {
-      const event = collection(Storage, "5월6일");
+      const event = collection(Storage, date);
       const result = await getDocs(query(event, orderBy("timestamp"), limit(6)));
       result.docs.forEach((el) => {
         setUserNames((userNames) => [...userNames, el.data().name]);

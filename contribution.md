@@ -19,3 +19,4 @@
 - 🔖 release: 릴리즈에 대한 커밋
 - ➕ plus : add dependency
 - ➖ minus : remove dependency
+- 🥧 menu : make plan for meal
