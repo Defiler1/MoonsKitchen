@@ -5,7 +5,7 @@ const resources = {
   en: {
     translation: {
       index: {
-        date: "May 29th",
+        date: "June 6th",
         main_description1: "Join now and enjoy the elegant ",
         main_description2: "cuisine prepared by Mr. Moon!",
         main_btn_reserve: "Join",
@@ -32,7 +32,7 @@ const resources = {
   jp: {
     translation: {
       index: {
-        date: "5月29日",
+        date: "6月6日",
         main_description1: "ムンさんが作ってくれる上品な料理、今すぐ参加",
         main_description2: "してお楽しみください!!!",
         main_btn_reserve: "参加する",
@@ -59,7 +59,7 @@ const resources = {
   ko: {
     translation: {
       index: {
-        date: "5월29일",
+        date: "6월6일",
         main_description1: "문씨가 만들어주는 품격있는 요리 지금 참가해서",
         main_description2: "즐기세요!!",
         main_description3: "문씨가 만들어주는 품격있는 요리",
