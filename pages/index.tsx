@@ -24,7 +24,7 @@ export default function Home() {
     participantsPage.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const date = "5월29일"; // firestore 에 저장할 콜렉션 이름
+  const date = "6월6일"; // firestore 에 저장할 콜렉션 이름
   const imgSrc = "/rose_pasta.jpg"; // 메뉴 이미지
   const imgAlt = "rose pasta image"; // 메뉴 이미지 alt
 
