@@ -42,6 +42,6 @@
 
 개발하기 전 먼저 Figma 디자인툴을 활용해 전체적인 페이지 디자인과 기능들을 정의 했습니다.
 
-[Notion]([https://www.notion.so/Moon-s-Kitchen-76bdc94ba48440e286008b3c9beaef0e?pvs=4](https://ballistic-dime-131.notion.site/Moon-s-Kitchen-76bdc94ba48440e286008b3c9beaef0e?pvs=4))
+[Notion](https://ballistic-dime-131.notion.site/Moon-s-Kitchen-76bdc94ba48440e286008b3c9beaef0e?pvs=4)
 
 개발하면서 이것저것 노션에다가 발생한 에러, 기술사용등을 메모하면서 개발 했습니다.
